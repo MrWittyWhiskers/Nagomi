@@ -34,8 +34,6 @@ body{
     margin-bottom: 20px;
 }
 
-
-
 .item button {
     margin-top: 5px;
     padding: 8px;
@@ -57,6 +55,7 @@ body{
     background-color: #007bff;
     color: white;
     cursor:pointer;
+    margin-bottom: 10px;
 }
 
 .buttonGroup img.itemGroup{
@@ -67,21 +66,82 @@ body{
 
 #inputDisplay{
     width: 100%;
-    padding: 10px;
+    padding: 12px 16px;
     font-size:1rem;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
 }
 
-#addButton, button[onclick*="deleteInput"]{
-    padding:10px;
-    margin-right: 5px;
+#inputDisplay:hover{
+    outline:none;
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+#addButton,
+button[onclick*= "deleteInput"]{
+    padding: 12px 20px;
     font-size: 1rem;
+    border:none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor:pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addButton{
+    background-color: #28a745;
+    color:white;
+}
+
+#addButton:hover{
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+button[onclick *= "deleteInput"]{
+    background-color: #dc3545;
+    color:white;
+}
+
+button[onclick*="deleteInput"]:hover{
+    background-color: #c82333;
+    transform: scale(1.03);
 }
 
 #orderList{
     list-style-type:none;
     padding:none;
+}
+
+#orderList li{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#orderList button{
+    background-color:#ff6f61;
+    color: white;
+    border:none;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#orderList button:hover{
+    background-color: #e55d50;
 }
 
 @media (max-width: 480px) {
