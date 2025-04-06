@@ -1,6 +1,7 @@
 const inputDisplay = document.getElementById("inputDisplay");
 const addButton = document.getElementById("addButton");
 const orderList = document.getElementById("orderList");
+inputDisplay.readOnly = true;
 
 let pendingJapanese = "";
 let pendingEnglish = "";
@@ -17,7 +18,7 @@ function addItemName(inJapanese, inEnglish){
 //adds desired item count into input display
 function addItemCount(input){
     japaneseCount = `${input}個`;   // keeps the japanese version 
-    englishCount = `x ${input}`;    // keeps the english part for further use
+    englishCount = `× ${input}`;    // keeps the english part for further use
     inputDisplay.value = `${pendingEnglish} ${englishCount}`; //shows the english part and recalls the previously ordered item name 
 }
 
@@ -33,8 +34,15 @@ function deleteInput(){
 //adds an item order into the list 
 addButton.addEventListener("click", () => {
     const englishOrder = inputDisplay.value.trim(); //trims unncessary spaces
-    if (englishOrder === "") return;    // if there's nothing in inputDisplay, englishOrder won't do anything and the function ends
-
+    if (englishOrder === "") {
+        alert("You haven't entered any item!")
+        return;
+    }    // if there's nothing in inputDisplay, englishOrder won't do anything and the function ends
+    if (!/[A-Za-z]/.test(englishOrder) || !/\d/.test(englishOrder)) {
+        alert("Both item name and item count please!");
+        return; // Prevent adding to the list if the alert is shown
+    }
+    
     const bilingualOrder = `${pendingJapanese}${japaneseCount}（${pendingEnglish} ${englishCount}）`;   //japanese and english combined
 
     const li = document.createElement("li");    //order added into order list
