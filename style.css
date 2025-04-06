@@ -59,7 +59,10 @@ body{
 }
 
 .buttonGroup img.itemGroup{
-    width: 50%;
+    width: 100%;
+    max-width: 200px;
+    height:auto;
+    margin-bottom: 8px;
     object-fit: contain;
     margin-right: 5px;
 }
