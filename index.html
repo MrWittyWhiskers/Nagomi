@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "container">
+    <!-- this is the beta version. 
+     
+        the goal of the beta is to:
+            - replace the sentence style with a to-do list 
+            - display the items together with item count 
+            - enable the deletion of each item of the list 
+
+    -->
+
+    <!-- bug report:
+            - the input area can be typed out manually 
+                -> (currently under debugging)
+            - variables names are a bit confusing
+                -> reorganized and renamed a few stuff
+            - inputDisplay displaying the japanese version would have been a bit confusing 
+                -> changed it so it displays the english order first 
+            - the item count indicator didn't appear for the japanese part 
+                -> added the same indicator used for the english part to the japanese part 
+            - now that each numbers dont stack, once zero comes, the other numbers get swapped 
+                -> changed 0 to 10 to avoid further trouble for now 
+            - item count itself without item name can be ordered actually
+                -> (currently under debugging)
+     -->
+
+
+        
+
+    
+    
+
+    <div class = "buttonGroup">
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/nigiri.png">
+            <button onclick = "addItemName('握り1人前','sushi 1 serving')">sushi 1 serving</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/jounigiri.png">
+            <button onclick = "addItemName('上握り１人前','higher sushi 1 serving')">higher sushi 1 serving</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/tokujounigiri.png">
+            <button onclick = "addItemName('特上握り１人前','highest sushi 1 serving')">highest sushi 1 serving</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/chirashi.png">
+            <button onclick = "addItemName('ちらし','scattered sushi rice')">scattered sushi rice</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/jouchirashi.png">
+            <button onclick = "addItemName('上ちらし','higher scattered sushi rice')">higher scattered sushi rice</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/battera.png">
+            <button onclick = "addItemName('バッテラ','compressed mackerel sushi')">compressed mackerel sushi</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/matsumae.png">
+            <button onclick = "addItemName('松前','dried squid salad')",>dried squid salad</button>
+        </div>
+        <div class = "item">
+            <img class = "itemGroup" src = "../images/futomaki.png">
+            <button onclick = "addItemName('上巻き（太巻き）','fat roll')">fat roll</button>
+        </div>
+    </div>
+    
+    
+
+    <div class = "buttonGroup">
+        <button onclick = "addItemCount('1')">1</button>
+        <button onclick = "addItemCount('2')">2</button>
+        <button onclick = "addItemCount('3')">3</button>
+        <button onclick = "addItemCount('4')">4</button>
+        <button onclick = "addItemCount('5')">5</button>
+        <button onclick = "addItemCount('6')">6</button>
+        <button onclick = "addItemCount('7')">7</button>
+        <button onclick = "addItemCount('8')">8</button>
+        <button onclick = "addItemCount('9')">9</button>
+        <button onclick = "addItemCount('10')">10</button>
+    </div>
+
+    
+
+        <input type = "text" id = "inputDisplay"></input>
+        <button id = "addButton">Add to Order List</button>
+        <button onclick = "deleteInput()">Remove Current Order</button>
+
+    
+
+        <ul id = "orderList"></ul>
+    
+    <script src = "system.js"></script>
+    </div>
+</body>
+</html>

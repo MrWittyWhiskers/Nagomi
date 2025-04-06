@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+}
+
+.container{
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.buttonGroup{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* <-- This will fit two items per row */
+    margin-bottom: 20px;
+}
+
+
+
+.item button {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } 
+
+.buttonGroup button{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border:none;
+    background-color: #007bff;
+    color: white;
+    cursor:pointer;
+}
+
+.buttonGroup img.itemGroup{
+    width: 50%;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+#inputDisplay{
+    width: 100%;
+    padding: 10px;
+    font-size:1rem;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#addButton, button[onclick*="deleteInput"]{
+    padding:10px;
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+#orderList{
+    list-style-type:none;
+    padding:none;
+}
+
+@media (max-width: 480px) {
+    .buttonGroup button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .buttonGroup img.itemGroup {
+        width: 50px;
+        height: 50px;
+    }
+}
