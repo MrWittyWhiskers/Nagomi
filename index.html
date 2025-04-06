@@ -19,7 +19,7 @@
 
     <!-- bug report:
             - the input area can be typed out manually 
-                -> (currently under debugging)
+                -> made the input area to be read-only 
             - variables names are a bit confusing
                 -> reorganized and renamed a few stuff
             - inputDisplay displaying the japanese version would have been a bit confusing 
@@ -29,7 +29,7 @@
             - now that each numbers dont stack, once zero comes, the other numbers get swapped 
                 -> changed 0 to 10 to avoid further trouble for now 
             - item count itself without item name can be ordered actually
-                -> (currently under debugging)
+                -> added a must-condition to have both item name and item count 
      -->
 
 
@@ -40,35 +40,35 @@
 
     <div class = "buttonGroup">
         <div class = "item">
-            <img class = "itemGroup" src = "images/nigiri.png">
+            <img class = "itemGroup" src = "../images/nigiri.png">
             <button onclick = "addItemName('握り1人前','sushi 1 serving')">sushi 1 serving</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/jounigiri.png">
+            <img class = "itemGroup" src = "../images/jounigiri.png">
             <button onclick = "addItemName('上握り１人前','higher sushi 1 serving')">higher sushi 1 serving</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/tokujounigiri.png">
+            <img class = "itemGroup" src = "../images/tokujounigiri.png">
             <button onclick = "addItemName('特上握り１人前','highest sushi 1 serving')">highest sushi 1 serving</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/chirashi.png">
+            <img class = "itemGroup" src = "../images/chirashi.png">
             <button onclick = "addItemName('ちらし','scattered sushi rice')">scattered sushi rice</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/jouchirashi.png">
+            <img class = "itemGroup" src = "../images/jouchirashi.png">
             <button onclick = "addItemName('上ちらし','higher scattered sushi rice')">higher scattered sushi rice</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/battera.png">
+            <img class = "itemGroup" src = "../images/battera.png">
             <button onclick = "addItemName('バッテラ','compressed mackerel sushi')">compressed mackerel sushi</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/matsumae.png">
+            <img class = "itemGroup" src = "../images/matsumae.png">
             <button onclick = "addItemName('松前','dried squid salad')",>dried squid salad</button>
         </div>
         <div class = "item">
-            <img class = "itemGroup" src = "images/futomaki.png">
+            <img class = "itemGroup" src = "../images/futomaki.png">
             <button onclick = "addItemName('上巻き（太巻き）','fat roll')">fat roll</button>
         </div>
     </div>
