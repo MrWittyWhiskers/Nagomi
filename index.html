@@ -30,6 +30,8 @@
                 -> changed 0 to 10 to avoid further trouble for now 
             - item count itself without item name can be ordered actually
                 -> added a must-condition to have both item name and item count 
+            - the item "sushi 1 serving" had numerics in it, causing a trouble with filtering 
+                -> changed the text to "eight piece"
      -->
 
 
@@ -41,15 +43,15 @@
     <div class = "buttonGroup">
         <div class = "item">
             <img class = "itemGroup" src = "images/nigiri.png">
-            <button onclick = "addItemName('握り1人前','sushi 1 serving')">sushi 1 serving</button>
+            <button onclick = "addItemName('握り1人前','sushi eight piece set')">sushi eight piece set</button>
         </div>
         <div class = "item">
             <img class = "itemGroup" src = "images/jounigiri.png">
-            <button onclick = "addItemName('上握り１人前','higher sushi 1 serving')">higher sushi 1 serving</button>
+            <button onclick = "addItemName('上握り１人前','higher sushi eight piece set')">higher sushi eight piece set</button>
         </div>
         <div class = "item">
             <img class = "itemGroup" src = "images/tokujounigiri.png">
-            <button onclick = "addItemName('特上握り１人前','highest sushi 1 serving')">highest sushi 1 serving</button>
+            <button onclick = "addItemName('特上握り１人前','highest sushi eight piece set')">highest sushi eight piece set</button>
         </div>
         <div class = "item">
             <img class = "itemGroup" src = "images/chirashi.png">
